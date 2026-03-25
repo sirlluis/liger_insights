@@ -67,36 +67,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Simple form handling with animation
     const form = document.getElementById('form-contacto');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
-            const originalHTML = btn.innerHTML;
-            
-            // Animación de carga
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            btn.style.opacity = '0.9';
-            btn.disabled = true;
-            
-            // Simulate sending delay
-            setTimeout(() => {
+if (form) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const originalHTML = btn.innerHTML;
+
+        // Animación de carga
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        btn.style.opacity = '0.9';
+        btn.disabled = true;
+
+        try {
+            // Envío real a Formspree
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                // Éxito
                 btn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje Enviado!';
                 btn.style.background = 'linear-gradient(135deg, #00b09b, #96c93d)';
                 btn.style.boxShadow = '0 4px 15px rgba(0, 176, 155, 0.3)';
-                
                 form.reset();
-                
-                // Reset button after 4 seconds
-                setTimeout(() => {
-                    btn.innerHTML = originalHTML;
-                    btn.style.background = '';
-                    btn.style.boxShadow = '';
-                    btn.style.opacity = '1';
-                    btn.disabled = false;
-                }, 4000);
-            }, 1800);
-        });
-    }
+            } else {
+                // Error en el envío
+                btn.innerHTML = '<i class="fas fa-times"></i> Error al enviar';
+                btn.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+            }
+        } catch (error) {
+            btn.innerHTML = '<i class="fas fa-times"></i> Error al enviar';
+            btn.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+        }
+
+        // Reset button after 4 seconds
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = '';
+            btn.style.boxShadow = '';
+            btn.style.opacity = '1';
+            btn.disabled = false;
+        }, 4000);
+    });
+}
 
     // Initialize simple scroll reveal animation
     const observerOptions = {
