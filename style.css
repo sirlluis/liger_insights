@@ -489,6 +489,87 @@ section {
 .service-link:hover i {
     transform: translateX(5px);
 }
+/*Paquetes*/
+.paquetes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.paquetes-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.paquetes-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.paquetes-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(13, 71, 161, 0.12);
+}
+
+.paquetes-card:hover::before {
+    transform: scaleX(1);
+}
+
+.paquetes-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 16px;
+    margin-bottom: 1.8rem;
+    transition: var(--transition);
+}
+
+.paquetes-card:hover .paquetes-icon {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.paquetes-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.paquetes-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.paquetes-link i {
+    transition: transform 0.3s ease;
+}
+
+.paquetes-link:hover i {
+    transform: translateX(5px);
+}
 
 /* Testimonials */
 .testimonials-grid {
