@@ -416,6 +416,15 @@ section {
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card p {
+    flex-grow: 1;
+}
+
+.service-card {
     background: var(--white);
     padding: 3rem 2rem;
     border-radius: 20px;
