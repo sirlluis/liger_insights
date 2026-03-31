@@ -131,7 +131,7 @@ if (form) {
     }, observerOptions);
 
     // Apply animation to elements
-    const animateElements = document.querySelectorAll('.service-card, .testimonial-card, .about-content, .contact-info, .contact-form');
+    const animateElements = document.querySelectorAll('.testimonial-card, .about-content, .contact-info, .contact-form');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
