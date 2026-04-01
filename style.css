@@ -1046,3 +1046,12 @@ footer {
 .liger-banner__close:hover {
   color: #fff;
 }
+
+.paquetes {
+  background: linear-gradient(
+    135deg,
+    #ffd4b8 10%,
+    #f9b8d4 50%,
+    #ffc8d8 100%
+  ) !important;
+}
