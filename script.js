@@ -138,4 +138,36 @@ if (form) {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
+
+    // Modal for emergent windows
+    const modal = document.getElementById('info-modal');
+    const modalIcon = document.getElementById('modal-icon').querySelector('i');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDetail = document.getElementById('modal-detail');
+
+    document.querySelectorAll('.more-info-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.service-card');
+            const template = card.querySelector(".detail-template");
+
+            modalIcon.className = 'fa-solid ' + card.dataset.icon;
+            modalTitle.textContent = card.dataset.title;
+            modalDetail.innerHTML = template.innerHTML;
+
+            modal.classList.add('active');
+        });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+
+    // Opcional: cerrar con tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('active');
+    });
 });

@@ -41,26 +41,6 @@
             </nav>
         </div>
     </header>
-<!--Banner para el descargable-->
-<div id="liger-banner">
-  <span class="liger-banner__text">
-    <svg class="liger-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <line x1="12" y1="8" x2="12" y2="12"/>
-      <line x1="12" y1="16" x2="12.01" y2="16"/>
-    </svg>
-    Realiza el autodiagnóstico gratuito de Liger para tu negocio.
-  </span>
-
-  <span class="liger-banner__actions">
-    <a href="https://drive.google.com/file/d/1ivsVPWhtrn87cFT2f3ZmMoTkP9hIW9oe/view?usp=sharing" target="_blank" class="liger-banner__btn">
-      Ver guía →
-    </a>
-    <button onclick="document.getElementById('liger-banner').style.display='none'" class="liger-banner__close" aria-label="Cerrar banner">
-      ✕
-    </button>
-  </span>
-</div>
     <main>
         <!-- Sección Inicio -->
         <section id="inicio" class="hero">
@@ -68,9 +48,9 @@
                 <div class="hero-content">
                     <span class="badge">Especialistas en Datos</span>
                     <h2>Análisis que impulsan <span>decisiones</span></h2>
-                    <p>Transformamos datos en estrategias claras y precisas. Potencia el
-                        crecimiento de tu negocio con inteligencia analítica de primer nivel, optimizando cada
-                        decisión con soluciones inteligentes para anticipar el futuro de tu negocio.</p>
+                    <p>Transformamos datos en estrategias claras y precisas. Potencia el crecimiento de tu negocio 
+con inteligencia analítica de primer nivel, optimizando cada decisión con soluciones 
+inteligentes para anticipar el futuro de tu negocio. Conversa con nuestro agente de IA y descúbrelo tú mismo.</p>
                     <div class="hero-buttons">
                         <a href="#servicios" class="btn-primary btn-large">Nuestros Servicios</a>
                         <a href="#contacto" class="btn-outline btn-large">Hablemos</a>
@@ -102,8 +82,16 @@
                 <div class="about-content">
                     <h2 class="section-title">Quiénes Somos</h2>
                     <h3>Inteligencia ágil para generar decisiones y crecimiento.</h3>
-                    <p>En Liger Insights, somos un equipo multidisciplinario de analistas de datos especialistas en estadística aplicada a entornos empresariales. Desde la auditoría inicial hasta la creación de dashboards intuitivos y el seguimiento post-proyecto, nos aseguramos de entregar algo que como dueño puedas entender y trabaje a favor de la rentabilidad de tu negocio.</p>
-                    <p>Nuestra misión es simple: traducir lo complejo. Hacemos que la tecnología de vanguardia sea accesible, accionable y, sobre todo, útil para el día a día de las empresas.</p>
+                    <p>Somos un equipo multidisciplinario especialista en análisis de datos y Machine Learning 
+aplicado a cafeterías. A diferencia de los dashboards tradicionales que solo 
+muestran números, nuestros agentes de IA analizan tus datos de ventas, inventario
+y operación para decirte qué está pasando y por qué — apoyados en modelos de 
+Machine Learning entrenados con patrones históricos reales de operación, capaces de 
+detectar en segundos una caída de ventas, una fuga de inventario o una anomalía que a 
+simple vista pasaría desapercibida. Además, construimos nuestros agentes conversacionales 
+sobre Salesforce Agentforce, para que cualquier persona de tu equipo pueda usarlos sin 
+necesitar saber de datos.</p>
+                    <p><strong>Nuestra misión es simple:</strong> traducir lo complejo. Tu negocio, analizado en tiempo real, con solo preguntar.</p>
 
                     <ul class="features-list">
                         <li>
@@ -128,46 +116,75 @@
     <div class="container">
         <div class="section-header center">
             <h2 class="section-title center">Nuestros Servicios</h2>
-            <p>Soluciones integrales de datos diseñadas para escalar tu negocio al siguiente nivel.</p>
+            <p>Soluciones integrales de datos basadas en agentes de IA.</p>
         </div>
 
         <div class="services-grid">
 
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-                <h3>Auditoría inicial: Diagnóstico de necesidades</h3>
-                <p>Analizamos tu flujo de operación actual para identificar fugas de dinero, procesos manuales 
-                    lentos o falta de visibilidad en tus ventas.</p>
+            <div class="service-card"
+                data-icon="fa-hand-holding-dollar"
+                data-title="Agente 1: Finanzas y dirección"
+                data-detail="Texto adicional">
+                <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3>Agente 1: Finanzas y dirección</h3>
+                <p>Brinda una visión global, clara y en tiempo real sobre la rentabilidad general del negocio.</p>
+                <button class="more-info-btn">Ver subagentes</button>
+                
+                <template class="detail-template">
+                    <ul>
+                        <li><strong>Agente de salud financiera expres: </strong>Unifica datos de ventas, insumos y personal para generar un P&L operativo claro y alertar sobre desviaciones clave.</li>
+                    </ul>
+                </template>
+            </div>
+    
+
+            <div class="service-card"
+                data-icon="fa-user-tag"
+                data-title="Agente 2: Comercio y clientes">
+                <div class="service-icon"><i class="fa-solid fa-user-tag"></i></div>
+                <h3>Agente 2: Comercio y clientes</h3>
+                <p>Incrementa las ventas, captar y fidelizar clientes, y optimizar el mix de productos y canales.</p>
+                <button class="more-info-btn">Ver subagentes</button>
+
+                <template class="detail-template">
+                    <ul>
+                        <li><strong>Agente Diagnóstico de Ventas por Turno:</strong> Analiza el flujo de ventas para lanzar promociones estratégicas y pruebas A/B.</li>
+                        <li><strong>Agente Optimización de Menú:</strong> Diseña una carta rentable equilibrando el margen de ganancia con la popularidad de cada plato.</li>
+                        <li><strong>Agente Fidelización y Repetición:</strong> Segmenta clientes para lanzar ofertas personalizadas y aumentar la frecuencia de visita.</li>
+                        <li><strong>Agente Orquestador de Reseñas:</strong> Gestiona la reputación online, respondiendo comentarios y detectando fallas recurrentes.</li>
+                        <li><strong>Agente Analista de Delivery:</strong> Optimiza comisiones, precios diferenciados y márgenes por aplicación de reparto.</li>
+                    </ul>
+                </template>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-                <h3>Estructura y Limpieza: Preparación de datos</h3>
-                <p>Transformamos bases de datos complejas en estructuras organizadas y legibles al consolidar la información 
-                    de tus puntos de venta, hojas de cálculo y facturas; además de eliminar duplicados y corregir errores de registro.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
-                <h3>Inteligencia con Machine Learning: Modela el Futuro</h3>
-                <p>Implementamos algoritmos para identificar patrones en la demanda de productos, tendencias de consumo 
-                    y segmentar a tus clientes. Adelántate a los cambios de compras por temporadas.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                <h3>Business Intelligence: Tu negocio en un vistazo</h3>
-                <p>Dashboards dinámicos e intuitivos. Visualiza ventas, finanzas, inventarios y más.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-rotate"></i></div>
-                <h3>Auditorias de seguimiento: Éxito a Largo Plazo</h3>
-                <p>Realizamos una auditoría final para medir el impacto de las soluciones y te acompañamos con 
-                    asesoría continua para ajustar el plan según el mercado.</p>
+            <div class="service-card"
+                data-icon="fa-users"
+                data-title="Agente 3: Análisis de operaciones y equipo">
+                <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Agente 3: Análisis de operaciones y equipo</h3>
+                <p>Controla el gasto operativo, reducir desperdicios y sincronizar la logística interna de cocina y piso.</p>
+                <button class="more-info-btn">Ver subagentes</button>
+                <template class="detail-template">
+                    <ul>
+                        <li><strong>Agente Planificador de Personal y Turnos:</strong> Proyecta la demanda para optimizar los horarios y los costos laborales del equipo.</li>
+                        <li><strong>Agente Control de Merma e Inventario:</strong> Detecta fugas entre el stock real y el teórico, ajustando pedidos a proveedores.</li>
+                        <li><strong>Agente “Prep Coach” para Cocina/Bar:</strong> Organiza el <em>mise en place</em> diario para evitar sobreproducción y quiebres de stock.</li>
+                        <li><strong>Agente Coach de Piso:</strong> Entrena al personal de servicio con tips en tiempo real para aumentar el ticket promedio (<em>upselling</em>).</li>
+                    </ul>
+                </template>
             </div>
 
         </div><!-- cierre único de services-grid -->
+
+        <!-- UN SOLO modal reutilizable -->
+        <div class="modal-overlay" id="info-modal">
+            <div class="modal-card">
+                <button class="modal-close">&times;</button>
+                <div class="service-icon" id="modal-icon"><i class="fa-solid"></i></div>
+                <h3 id="modal-title"></h3>
+                <div id="modal-detail"></div>
+            </div>
+        </div>
     </div>
 </section>
 <!-- Sección Paquetes -->
@@ -175,29 +192,30 @@
             <div class="container">
                 <div class="section-header center">
                     <h2 class="section-title center">Paquetes</h2>
-                    <p>Consulta nuestros paquetes y elige el que más se adapte a ti.</p>
+                    <p>Consulta nuestros paquetes y elige el que más se adapte a tu negocio.</p>
+                    <h4 class="paquetes-incluido"> Todos los paquetes incluyen los servicios de Auditoría inicial y Auditorias de seguimiento</h4>
                 </div>
 
                 <div class="paquetes-grid">
                     <div class="paquetes-card">
-                        <div class="paquetes-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-                        <h3>Paquete A: control de inventarios y mermas</h3>
-                        <p>El negocio pierde dinero por productos que se caducan o stock excesivo que no se vende.
-                        </p>
+                        <div class="paquetes-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <h3>Starter</h3>
+                        <p>Agente de salud financiera.</p>
                     </div>
 
                     <div class="paquetes-card">
-                        <div class="paquetes-icon"><i class="fa-solid fa-utensils"></i></div>
-                        <h3>Paquete B: ingeniería de menú y rentabilidad</h3>
-                        <p>Hay productos que se venden mucho pero dejan poco margen, o platos estrella que están ocultos.</p>
+                        <div class="paquetes-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>En crecimiento</h3>
+                        <p>Starter + Agente 2 ó 3 (a elegir)*.</p>
                     </div>
 
                     <div class="paquetes-card">
-                        <div class="paquetes-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                        <h3>Plan C: lealtad y comportamiento del cliente</h3>
-                        <p>El negocio no sabe quienes son sus clientes frecuentes ni atraer a quienes dejaron de ir.</p>
+                        <div class="paquetes-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                        <h3>Todo en uno</h3>
+                        <p>Los tres módulos de agentes + Análisis con Machine Learning.</p>
                     </div>
                 </div>
+                <footer class="nota-footer">*Ambos agentes con costo extra.</footer>
             </div>
         </section>
         <!-- Sección Testimonios -->
