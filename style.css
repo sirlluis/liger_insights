@@ -1183,6 +1183,24 @@ footer {
   }
 }
 
+@keyframes agent-glow-breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px rgba(91, 63, 255, 0.35),
+      0 0 20px rgba(91, 63, 255, 0.18);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 0 16px rgba(91, 63, 255, 0.75),
+      0 0 35px rgba(130, 80, 255, 0.5),
+      0 0 60px rgba(91, 63, 255, 0.25);
+  }
+}
+
+
 .recursos-btn {
   display: inline-flex;
   align-items: center;
@@ -1203,6 +1221,37 @@ footer {
   animation: none;
   transform: scale(0.97);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*Botón para la demo del agente*/
+
+.agent-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  animation: agent-glow-breathe 2.5s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agent-btn:active {
+  animation: none;
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.div-agent-btn{
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* === RESPONSIVE === */
