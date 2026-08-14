@@ -516,6 +516,24 @@ section {
 .service-link:hover i {
     transform: translateX(5px);
 }
+
+/*Agent section*/
+.agent-sub-title{
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.agent-section{
+  background: linear-gradient(
+    135deg,
+    #ffd4b8 10%,
+    #f9b8d4 50%,
+    #ffc8d8 100%
+  ) !important;
+}
+
+
 /*Paquetes*/
 .paquetes-grid {
     display: grid;
@@ -603,6 +621,21 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+.paquetes-card > ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.paquetes-card > ul > li > ul {
+    list-style-type: circle;
+    padding-left: 25px;
+    margin-top: 8px;
+}
+
+.paquetes-card > ul > li > ul > li {
+    display: list-item;
+}
+
 /* Testimonials */
 .testimonials-grid {
     display: grid;
