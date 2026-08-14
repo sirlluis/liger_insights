@@ -525,12 +525,10 @@ section {
 }
 
 .agent-section{
-  background: linear-gradient(
-    135deg,
-    #ffd4b8 10%,
-    #f9b8d4 50%,
-    #ffc8d8 100%
-  ) !important;
+    background: #E6AE8C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A8CECF, #E6AE8C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A8CECF, #E6AE8C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
@@ -1187,16 +1185,16 @@ footer {
   0%, 100% {
     transform: scale(1);
     box-shadow:
-      0 0 8px rgba(91, 63, 255, 0.35),
-      0 0 20px rgba(91, 63, 255, 0.18);
+      0 0 8px rgba(91, 63, 255, 0.4),
+      0 0 20px rgba(91, 63, 255, 0.2);
   }
 
   50% {
     transform: scale(1.02);
     box-shadow:
-      0 0 16px rgba(91, 63, 255, 0.75),
-      0 0 35px rgba(130, 80, 255, 0.5),
-      0 0 60px rgba(91, 63, 255, 0.25);
+      0 0 18px rgba(91, 63, 255, 0.85),
+      0 0 40px rgba(124, 92, 255, 0.55),
+      0 0 65px rgba(91, 63, 255, 0.3);
   }
 }
 
